@@ -42,7 +42,7 @@ footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:#667085;font-size
 <main>
 <div class="card">
 <h1>Política de Privacidad</h1>
-<p><strong>Última actualización:</strong> 29 de agosto de 2026</p>
+<p><strong>Última actualización:</strong> 22 de septiembre de 2026</p>
 
 <div class="notice">
 <p><strong>Responsable:</strong> Blas Avilés<br>
@@ -85,13 +85,26 @@ footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:#667085;font-size
 <p>Los usuarios deben evitar introducir este tipo de información en campos de texto de la aplicación.</p>
 
 <h3>2.3. Información almacenada localmente</h3>
-<p>La aplicación puede almacenar determinados datos y preferencias en el dispositivo para permitir un funcionamiento eficiente. Esto puede incluir datos locales de gastos, ingresos y categorías, la preferencia de tema, preferencias de bloqueo y la preferencia de uso de autenticación biométrica.</p>
+<p>La aplicación puede almacenar determinados datos y preferencias en el dispositivo para permitir un funcionamiento eficiente. Esto puede incluir datos locales de gastos, ingresos y categorías, sugerencias de compras pendientes, la preferencia de tema, preferencias de bloqueo y la preferencia de uso de autenticación biométrica.</p>
 
 <h3>2.4. Información biométrica</h3>
 <p>Ahorrapp puede utilizar la autenticación biométrica proporcionada por Android para desbloquear determinadas funciones. Ahorrapp no recopila, recibe ni almacena huellas digitales, rostros ni plantillas biométricas. La comprobación biométrica la realiza el sistema operativo y Ahorrapp recibe únicamente el resultado necesario para continuar o no con la operación.</p>
 
 <h3>2.5. Información técnica</h3>
 <p>Los servicios tecnológicos utilizados para proporcionar Ahorrapp pueden procesar información técnica necesaria para operar, proteger y diagnosticar el servicio, como información relacionada con solicitudes, conexiones, autenticación, errores y seguridad.</p>
+
+<h3>2.6. Detección opcional de compras mediante Google Wallet</h3>
+<p>Ahorrapp ofrece una función experimental y opcional que puede sugerir el registro de una compra a partir de una notificación de Google Wallet. Esta función permanece desactivada hasta que el usuario acepta el aviso mostrado por Ahorrapp y concede manualmente el acceso a notificaciones en los ajustes de Android.</p>
+<p>Mientras la función está activa, Android permite que Ahorrapp reciba notificaciones incluso cuando la aplicación está cerrada o no está en uso. Ahorrapp verifica primero la aplicación emisora e ignora las notificaciones que no provengan de Google Wallet. De una notificación compatible puede procesar:</p>
+<ul>
+<li>nombre del comercio;</li>
+<li>monto de la compra;</li>
+<li>fecha y hora de la notificación;</li>
+<li>referencia o nombre visible del medio de pago;</li>
+<li>últimos cuatro dígitos de la tarjeta cuando aparezcan en la notificación.</li>
+</ul>
+<p>Esta información se guarda únicamente en el dispositivo como una sugerencia pendiente. No se envía a los servidores de Ahorrapp ni a Supabase y no se crea ningún gasto hasta que el usuario revisa y confirma el registro. Al confirmar, solo se sincronizan los datos del gasto que el usuario haya revisado en el formulario; el contenido original de la notificación y los últimos cuatro dígitos no se sincronizan.</p>
+<p>El usuario puede desactivar la detección desde los ajustes de Ahorrapp y también puede revocar el acceso a notificaciones desde los ajustes de Android.</p>
 
 <h2>3. Cómo utilizamos la información</h2>
 <p>Utilizamos la información para:</p>
@@ -100,6 +113,7 @@ footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:#667085;font-size
 <li>autenticar usuarios mediante correo electrónico o Google;</li>
 <li>guardar y sincronizar gastos, ingresos, gastos fijos y categorías;</li>
 <li>generar resúmenes, análisis, ordenamientos y filtros;</li>
+<li>sugerir, cuando el usuario active esta función, el registro de compras detectadas en notificaciones de Google Wallet;</li>
 <li>mantener preferencias de la aplicación;</li>
 <li>permitir la recuperación de contraseña;</li>
 <li>proteger las cuentas y prevenir usos no autorizados;</li>
@@ -113,6 +127,7 @@ footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:#667085;font-size
 <p>Ahorrapp utiliza Supabase para autenticación, almacenamiento de datos, acceso a la base de datos y funciones del servidor. Los datos enviados a Supabase pueden incluir información de la cuenta y los datos financieros registrados por el usuario.</p>
 <h3>Google</h3>
 <p>Ahorrapp ofrece inicio de sesión mediante Google. La autenticación y los datos que Google proporciona están sujetos también a las políticas y condiciones de Google.</p>
+<p>Si el usuario activa la detección opcional de compras, Ahorrapp procesa localmente las notificaciones generadas por Google Wallet para crear sugerencias de gastos. Ahorrapp no se integra con cuentas bancarias ni recibe de Google los números completos de las tarjetas.</p>
 
 <h2>5. Compartición de información</h2>
 <p>Ahorrapp no vende los datos personales de sus usuarios.</p>
@@ -131,6 +146,7 @@ footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:#667085;font-size
 
 <h2>8. Conservación de los datos</h2>
 <p>Ahorrapp conserva la información mientras la cuenta permanezca activa y mientras sea necesaria para proporcionar el servicio.</p>
+<p>Las sugerencias de compras detectadas mediante notificaciones permanecen localmente por un máximo de 30 días y se eliminan antes si el usuario las registra, las ignora o elimina su cuenta.</p>
 <p>Cuando el usuario solicita la eliminación de su cuenta, Ahorrapp inicia la eliminación de los datos asociados a dicha cuenta. Los sistemas de terceros pueden estar sujetos a ciclos técnicos de retención y eliminación de respaldos o registros operativos.</p>
 <p>Cuando exista una obligación legal que requiera conservar determinada información, esa información podrá mantenerse durante el periodo exigido por la legislación aplicable.</p>
 
